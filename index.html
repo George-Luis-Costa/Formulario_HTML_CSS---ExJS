@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Metadados -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="Formulario.css" media="">
+
+    <!-- Título da página (aparece na aba) -->
+    <title>Cadastro</title>
+</head>
+
+<body>
+    <!--parte visível de toda a pagina-->
+    <!-- Cabeçalho com título e subtítulo (ambos com css de id "titulo") -->
+    <div class="campo">
+        <h1 id="titulo">Cadastro de DEVs</h1>
+        <p id="subtitulo">Complete suas informações</p>
+    </div>
+
+    <!-- Início do formulário -->
+    <form>
+        <fieldset class="grupo">
+            <!-- Campo do nome com legenda "nome" e css de classe "campo" -->
+            <div class="campo">
+                <label for="nome"><strong>Nome</strong></label>
+                <input type="text" nome="nome" id="nome" required>
+                <!-- Precisa preencher os campos com required para permitir o envio -->
+            </div>
+
+
+            <!-- Campo do sobrenome com legenda "sobrenome" e css de classe "campo" -->
+            <div class="campo">
+                <label for="sobrenome"><strong>sobrenome</strong></label>
+                <input type="text" nome="sobrenome" id="sobrenome" required>
+            </div>
+        </fieldset>
+
+        <!-- Campo de email com-->
+        <div class="campo">
+            <label for="email"><strong>Email</strong></label>
+            <input type="email" name="email" id="email" required>
+        </div>
+
+
+        <!-- Campo de desenvolvimento web com 3 opções de botões selecionáveis (radio button) e css de classe "campo" -->
+        <div class="campo">
+            <label><strong>Qual lado da aplicação você desenvolve</strong></label>
+            <label>
+                <input type="radio" name="WebDev" value="Front-end" checked >Front-end
+                <!-- checked para deixar selecionado o botao -->
+            </label>
+
+            <label>
+                <input type="radio" name="WebDev" value="Back-end">Back-end
+            </label>
+
+            <label>
+                <input type="radio" name="WebDev" value="FullStack" >FullStack
+            </label>
+        </div>
+
+
+        <!-- Campo de senioridade com 3 opções para escolha (select option) e css de classe "campo" -->
+        <div class="campo">
+            <label for="senioridade"></label><strong>Senioridade</strong>
+            <select id="senioridade" required>
+                <option selected disabled value="">Selecione</option> <!-- Para desativar o selecione -->
+                <option>Junior</option>
+                <option>Pleno</option>
+                <option>Senior</option>
+                <option>Master</option>
+            </select>
+        </div>
+
+        <fieldset class="grupo">
+            <!-- Campo de tecnologias para escolha de 1 ou mais opções para marcar (checkbox) e css de classe "campo" -->
+            <div id="check">
+                <label><strong>Selecione as tecnologias que você utiliza: </strong></label><br><br>
+
+                <input type="checkbox" id="tecnologia1" name="tecnologia1" value="HTML">
+                <label for="tecnologia1">HTML</label>
+
+                <input type="checkbox" id="tecnologia2" name="tecnologia2" value="CSS">
+                <label for="tecnologia2">CSS</label>
+
+                <input type="checkbox" id="tecnologia3" name="tecnologia3" value="JavaScript">
+                <label for="tecnologia3">JavaScript</label>
+
+                <input type="checkbox" id="tecnologia4" name="tecnologia4" value="Python">
+                <label for="tecnologia4">Python</label>
+
+                <input type="checkbox" id="tecnologia5" name="tecnologia5" value="Java">
+                <label for="tecnologia5">Java</label>
+
+                <input type="checkbox" id="outros" name="outros" value="Outros">
+                <label for="outros">Outros</label>
+            </div>
+        </fieldset>
+
+
+        <!-- Caixa de texto -->
+        <div class="campo">
+            <br />
+            <label for="experiencia"><strong>Conte me sua experiencia</strong></label>
+            <textarea name="experiencia" id="experiencia" row="6" style="width: 26em"></textarea>
+        </div>
+
+
+        <!-- Botão para enviar o formulário -->
+        <button class="botao" type="submit" onsubmit="">Concluido</button>
+    </form>
+
+</body>
+
+</html>
